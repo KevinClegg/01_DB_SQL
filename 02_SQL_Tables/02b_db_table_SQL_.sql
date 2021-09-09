@@ -15,7 +15,7 @@ USE boo;
 /* Tabelle anlegen, falls noch nicht vorhanden */
 CREATE TABLE IF NOT EXISTS test
 (
-    name VARCHAR(20) NOT NULL DEFAULT "TBA", 
+    name VARCHAR(20) NOT NULL UNIQUE DEFAULT "TBA", 
     age INT NOT NULL DEFAULT 0
 );
 
@@ -29,7 +29,7 @@ INSERT INTO test(name,age) VALUES ("Grizabella", 29);
 INSERT INTO test(age,name) VALUES (35,"Alonzo");
 INSERT INTO test VALUES ();
 
-INSERT INTO test(age,name) VALUES (35,"Alonzo");
+INSERT INTO test(age,name) VALUES (35,"Alonzo der Coole");
 
 /* Inhalte der Tabelle anzeigen */
 SELECT * FROM test;
